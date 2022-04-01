@@ -9,12 +9,13 @@ button{
     font-weight: bold;
     padding: 10px 15px;
     border: 1px solid black;
+    border-radius: 30px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     color: white;
     background-color:#FF2442;
 }
 button:hover{
-    background-color:#fc6378;
+    background-color:#f84c63;
 }
 
 .contenedor{
@@ -59,17 +60,51 @@ header a:hover{
     color: #D9D7F1;
 }
 
-#quienes-somos{
+
+
+
+#ofertas .contenedor{
+    width: 100%;
+}
+
+.oferta:first-child{
 
 }
-#quienes-somos{
-    color: #E7FBBE;
 
+.oferta:nth-child(2){
+
+}
+
+.oferta:nth-child(3){
+    
 }
 
 #quienes-somos .contenedor{
     text-align: center;
-    padding: 200px 12px
+    padding: 100px 12px
     ;
 
+}
+
+#contactenos .contenedor{
+    text-align: center;
+    padding: 100px 12px
+    ;
+}
+
+footer{
+    background-color:rgba(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+
+footer .contenedor{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
