@@ -13,56 +13,81 @@
 </head>
 
 <body id="fondo">
-<header>
-  <div class="container">
-    <p class="logo"><img width="50" src="imagen/logosf.png" alt="">Peludos Pet Shop</p>
-    <nav>
-      <a href="#">Perros</a>
-      <a href="#">Gatos</a>
-      <a href="#">Aves</a>
-      <a href="#">Roedores</a>
-    </nav>
-  </div>
-</header>
 
-                  <!-- Bootstrap Carrusel -->
-                  <div>
-                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="imagen/carrusel1.png" class="d-block w-100" alt="..." >
-                      </div>
-                      <div class="carousel-item">
-                        <img src="imagen/carrusel2.jpg" class="d-block w-100" alt="..." >
-                      </div>
-                      <div class="carousel-item">
-                        <img src="imagen/carrusel3.jpg" class="d-block w-100" alt="..." >
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-<!-- Bootstrap Carta -->
+  <nav class="navbar sticky-top navbar-dark navbar-expand-lg" style="background-color:black;">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img width="50" src="imagen/logosf.png" alt="">Peludos Pet Shop</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Perros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Aves</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Roedores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre Nostros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contactanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Bootstrap Carrusel -->
+<div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagen/carrusel1.png" class="d-block w-100" alt="..." >
+    </div>
+    <div class="carousel-item">
+      <img src="imagen/carrusel2.png" class="d-block w-100" alt="..." >
+    </div>
+    <div class="carousel-item">
+      <img src="imagen/carrusel3.png" class="d-block w-100" alt="..." >
+    </div>
+    <div class="carousel-item">
+      <img src="imagen/carrusel4.png" class="d-block w-100" alt="..." >
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
 <section id="ofertas">
   <div class="container">
   <h2>Ofertas del Día</h2>
-
 </div>
 </section>
-
-
+<!-- Bootstrap Carta -->
 <section>
   <div class="container">
     <div class="row">
@@ -226,7 +251,7 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sint nemo. 
         Porro molestias adipisci iure nulla neque illo ex. Error eaque similique dolor 
         vero voluptas possimus, sapiente tempore minima? Beatae.</p>
-        <button>Contactanos</button>
+        <button id="boton">Contactanos</button>
     </div>
 </section>
   
