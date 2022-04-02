@@ -4,7 +4,7 @@
     font-family:roboto,sans-serif;
 }
 
-button{
+.boton{
     font: size 1.5em;
     font-weight: bold;
     padding: 10px 15px;
@@ -14,52 +14,9 @@ button{
     color: white;
     background-color:#FF2442;
 }
-button:hover{
+button:hover .boton{
     background-color:#f84c63;
 }
-
-.container{
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-header {
-    color: white;
-    background-color:black;
-}
-
-header .logo {
-    margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    font-size:1.5em;
-}
-
-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 25px;
-
-}
-
-header a{
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #E7FBBE;
-}
-
-header a:hover{
-    color: #D9D7F1;
-}
-
 
 
 
@@ -84,7 +41,10 @@ small{
     ;
 }
 
+#card{
+    margin: 15px;
 
+}
 
 footer{
     background-color:rgba(230,230,230);
