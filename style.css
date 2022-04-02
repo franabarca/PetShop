@@ -1,7 +1,59 @@
-#fondo{
+/* NAV */
+
+
+  ul{
+    list-style: none;
+  }
+  #menu li>a{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    width: 16vw;
+  
+  }
+  #menu li>a:hover{
+    color:white;
+    background-color:black;
+
+  }
+  #menu>li{
+    float: left;
+    text-align:center;
+  }
+  #menu>li>ul{
+    display: none;
+    position:absolute;
+  }
+  #menu>li:hover>ul {
+    display:block;
+  }
+  nav .logo {
+   text-align: center;
     margin: 0;
-    background-color: #D9D7F1;
-    font-family:roboto,sans-serif;
+    padding: 25px 30px;
+    font-weight: bold;
+    font-size:1.5em;
+    background-color: white;
+    color: black;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+}
+
+/*Header */
+
+header {
+    color: white;
+    background-color:white;
+    position: flex;
 }
 
 button{
@@ -14,38 +66,12 @@ button{
     background-color:#FF2442;
 }
 button:hover{
-    background-color:#fc6378;
+opacity: 0.5;
 }
 
 .contenedor{
     max-width: 1400px;
     margin: 0 auto;
-}
-
-header {
-    color: white;
-    background-color:black;
-}
-
-header .logo {
-    margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    font-size:1.5em;
-}
-
-header .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 25px;
-
 }
 
 header a{
@@ -59,17 +85,21 @@ header a:hover{
     color: #D9D7F1;
 }
 
-#quienes-somos{
+/*Header */
 
+#fondo{
+    margin: 0;
+    background-color: white;
+    font-family:roboto,sans-serif;
 }
+
 #quienes-somos{
-    color: #E7FBBE;
+    color: black;
 
 }
 
 #quienes-somos .contenedor{
     text-align: center;
-    padding: 200px 12px
-    ;
+    padding: 200px 12px;
 
 }
