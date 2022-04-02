@@ -1,10 +1,17 @@
 #fondo{
     margin: 0;
-    background-color: #D9D7F1;
+    background-color: #bebebe;
     font-family:roboto,sans-serif;
 }
 
-.boton{
+section h2{
+    text-align: center;
+    font-size: 3em;
+    padding: 50px 12px;
+    padding-top: 70px;
+    ;
+}
+#contactenos button{
     font: size 1.5em;
     font-weight: bold;
     padding: 10px 15px;
@@ -14,7 +21,7 @@
     color: white;
     background-color:#FF2442;
 }
-button:hover .boton{
+#contactenos button:hover{
     background-color:#f84c63;
 }
 
@@ -46,6 +53,80 @@ small{
 
 }
 
+
+
+#perritos .container{
+    display: flex;
+    text-align: center;
+    padding: 10px 12px;
+    justify-content: center;
+    
+}
+#perritos .detalle{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding: 0px 30px;
+    display: flex;
+}
+#gatitos .container{
+    display: flex;
+    text-align: center;
+    padding: 10px 12px;
+    justify-content: center;
+}
+#gatitos .detalle{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding: 0px 30px;
+    display: flex;
+}
+
+#aves .container{
+    display: flex;
+    text-align: center;
+    padding: 10px 12px;
+    justify-content: center;
+}
+#aves .detalle{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding: 0px 30px;
+    display: flex;
+}
+
+#roedores .container{
+    display: flex;
+    text-align: center;
+    padding: 10px 12px;
+    justify-content: center;
+}
+#roedores .detalle{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding: 0px 30px;
+    display: flex;
+}
+
+#perritos .container .img-container .imagen-redonda{
+    border-radius:50%;
+
+} 
+#gatitos .container .img-container .imagen-redonda{
+    border-radius:50%;
+
+} 
+#aves .container .img-container .imagen-redonda{
+    border-radius:50%;
+
+} 
+#roedores .container .img-container .imagen-redonda{
+    border-radius:50%;
+
+} 
 footer{
     background-color:rgba(230,230,230);
 }
