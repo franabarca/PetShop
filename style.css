@@ -1,30 +1,19 @@
 #fondo{
     margin: 0;
-    background-color: #bebebe;
+    background-color: #ffffff;
     font-family:roboto,sans-serif;
 }
 
 section h2{
     text-align: center;
-    font-size: 3em;
+    font-size: 3.5em;
     padding: 50px 12px;
     padding-top: 70px;
     ;
 }
-#contactenos button{
-    font: size 1.5em;
-    font-weight: bold;
-    padding: 10px 15px;
-    border: 1px solid black;
-    border-radius: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    color: white;
-    background-color:#FF2442;
+.detalle p{
+    font-size: 1.5em;
 }
-#contactenos button:hover{
-    background-color:#f84c63;
-}
-
 
 
 #ofertas .container{
@@ -42,45 +31,106 @@ small{
 
 }
 
-#contactenos .container{
+
+
+#cartas {
+    padding-bottom: 100px;
+
+}
+
+
+
+.detalle{
+    text-align: initial;
+    display: flex;
+    padding: 0px 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+.detalle a{
+    text-decoration: none;
+    color: rgb(253, 255, 126);
+}
+.detalle a:hover{
+    color:white;
+}
+#perritos {
+
+    font-weight: bold;
+    text-shadow: 3px 2px 2px rgba(0,0,0);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 100px 12px
-    ;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(imagen/fondoperro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-bottom: 70px;
 }
-
-#card{
-    margin: 15px;
-
-}
-
-
-
 #perritos .container{
     display: flex;
     text-align: center;
     padding: 10px 12px;
     justify-content: center;
-    
+
+
 }
-#perritos .detalle{
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    padding: 0px 30px;
+#gatitos {
+
+    font-weight: bold;
+    text-shadow: 2px 5px 5px rgba(0,0,0);
+    color: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(imagen/fondogato.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
+
 #gatitos .container{
     display: flex;
     text-align: center;
     padding: 10px 12px;
     justify-content: center;
+
 }
-#gatitos .detalle{
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    padding: 0px 30px;
+#aves {
+
+    font-weight: bold;
+    text-shadow: 2px 5px 5px rgba(0,0,0);
+    color: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(imagen/fondoave.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 #aves .container{
@@ -88,45 +138,88 @@ small{
     text-align: center;
     padding: 10px 12px;
     justify-content: center;
-}
-#aves .detalle{
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    padding: 0px 30px;
-    display: flex;
-}
 
+}
+#roedores {
+
+    font-weight: bold;
+    text-shadow: 2px 5px 5px rgba(0,0,0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(imagen/fondoroedor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 #roedores .container{
     display: flex;
     text-align: center;
     padding: 10px 12px;
     justify-content: center;
 }
-#roedores .detalle{
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    padding: 0px 30px;
+
+
+.redondo{
+
+    border: 2px solid black;
+    border-radius: 50%;
+
+}
+#quienes-somos {
+    font-weight: bold;
+    text-shadow: 2px 5px 5px rgba(0,0,0);
+    color: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-color: rgba(30,30,30);
+}
+#contactenos {
+    font-weight: bold;
+    text-shadow: 2px 5px 5px rgba(0,0,0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(imagen/starken.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#contactenos button{
+    font-size: 1.7em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color:#FF2442;
+}
+#contactenos button:hover{
+    background-color:#f84c63;
 }
 
-#perritos .container .img-container .imagen-redonda{
-    border-radius:50%;
 
-} 
-#gatitos .container .img-container .imagen-redonda{
-    border-radius:50%;
-
-} 
-#aves .container .img-container .imagen-redonda{
-    border-radius:50%;
-
-} 
-#roedores .container .img-container .imagen-redonda{
-    border-radius:50%;
-
-} 
 footer{
     background-color:rgba(230,230,230);
 }
@@ -142,4 +235,13 @@ footer .container{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+
+    #roedores .container .img-container{
+        background-image: url(imagen/gatos.png)
+    }
+
+    
 }
