@@ -20,6 +20,9 @@
     font-weight: bold;
     text-shadow: 2px 5px 5px rgba(0,0,0);
 }
+.carousel-caption h3{
+    font-size:5vw;
+}
 .carousel-caption h5{
     font-size:6vw;
     font-weight: bold;
@@ -200,8 +203,15 @@ small{
     font-size: 3.5em;
 
 }
+#quienes-somos img{
+    border-radius: 10%;
+    max-width: 100%;
+
+}
+
 #quienes-somos p{
     font-size: 1.5em;
+    padding-bottom:30px;
 
 }
 #quienes-somos {
