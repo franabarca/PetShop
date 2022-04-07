@@ -4,6 +4,19 @@
     font-family:roboto,sans-serif;
 }
 
+.container-fluid a{
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+#navbarSupportedContent a{
+    font-size: 1.1em;
+    color: rgb(241, 230, 200);
+}
+#navbarSupportedContent a:hover{
+    color: rgb(116, 113, 106);
+}
+
 #ofertas img{
     max-width: 100%;
 }
@@ -199,19 +212,18 @@ small{
 
 }
 #quienes-somos h2{
-    padding-bottom: 40px;
     font-size: 3.5em;
 
 }
 #quienes-somos img{
-    border-radius: 10%;
-    max-width: 100%;
+
+    border-radius: 30%;
+    max-width: 70%;
 
 }
 
 #quienes-somos p{
     font-size: 1.5em;
-    padding-bottom:30px;
 
 }
 #quienes-somos {
