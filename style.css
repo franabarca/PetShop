@@ -78,9 +78,8 @@ small{
 #perritos {
 
     font-weight: bold;
-    text-shadow: 3px 2px 2px rgba(0,0,0);
+    text-shadow: 2px 5px 5px rgba(0,0,0);
     color: white;
-    
 
     display: flex;
     align-items: center;
@@ -96,7 +95,6 @@ small{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding-bottom: 70px;
 }
 #perritos .container{
     padding-top: 80px;
