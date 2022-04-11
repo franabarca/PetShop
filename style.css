@@ -8,6 +8,9 @@
     font-weight: bold;
     font-size: 1.7em;
 }
+.container-fluid img{
+    padding-right: 1.1vw;
+}
 
 #navbarSupportedContent a{
     font-size: 1.1em;
