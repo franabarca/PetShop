@@ -14,7 +14,7 @@
 
 #navbarSupportedContent a{
     font-size: 1.1em;
-    color: rgb(241, 230, 200);
+    color: rgb(255, 255, 255);
 }
 #navbarSupportedContent a:hover{
     color: rgb(116, 113, 106);
@@ -310,8 +310,5 @@ footer .container{
     justify-content: center;
     align-items: flex-end;
 }
-.modal-content { background: #000 !important; }
+.modal-content { background: rgba(0, 0, 0, 0.8)!important; }
 
-.fade.modal-backdrop.show{
-    opacity: 0.8;
-   }
