@@ -1,16 +1,32 @@
+p{
+    font-size: 1.3em;
+}
+
+
 #fondo{
     margin: 0;
     background-color: rgba(30,30,30);
     font-family:roboto,sans-serif;
 }
+.navbar-brand-logo h2{
+    color: rgb(255, 255, 255);
+    padding-bottom: none;
+    margin-bottom: 0;
+}
 
 .container-fluid a{
     font-weight: bold;
-    font-size: 1.7em;
+    text-decoration: none;
+    font-size:80px;
+    
 }
 .container-fluid img{
     padding-right: 1.1vw;
+    vertical-align: top;
+    display: inline-block;
 }
+
+
 
 #navbarSupportedContent a{
     font-size: 1.1em;
