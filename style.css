@@ -235,7 +235,7 @@ small{
 }
 #quienes-somos h2{
     padding-top: 20px;
-    font-size: 3.5em;
+    font-size: 2.5em;
 
 }
 #quienes-somos img{
@@ -246,8 +246,7 @@ small{
 }
 
 #quienes-somos p{
-    font-size: 1.5em;
-    padding-bottom: 20px;
+    font-size: 2.5em;
 
 }
 #quienes-somos {
@@ -265,14 +264,10 @@ small{
 }
 
 .parrafo{
-    padding-top:3px;
-    color: rgb(255, 0, 0);
     display: none;
 }
 
 .imagen{
-    padding-top:3px;
-    color: rgb(255, 0, 0);
     display: none;
 }
 

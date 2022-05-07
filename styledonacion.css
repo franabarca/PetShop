@@ -6,6 +6,38 @@
     color: rgb(116, 113, 106);
 }
 
+.navbar-brand-logo h2{
+    color: rgb(255, 255, 255);
+    padding-bottom: none;
+    margin-bottom: 0;
+}
+.container-fluid a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size:80px;
+    
+}
+.container-fluid img{
+    padding-right: 1.1vw;
+    vertical-align: top;
+    display: inline-block;
+}
+
+
+
+#navbarSupportedContent a{
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+}
+#navbarSupportedContent a:hover{
+    color: rgb(116, 113, 106);
+}
+
+#fondo{
+    margin: 0;
+    background-color: rgba(30,30,30);
+    font-family:roboto,sans-serif;
+}
 
 #donacion {
     font-weight: bold;

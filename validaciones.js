@@ -29,4 +29,15 @@ $(document).ready(function() {
 
     });
 
+    $("#btnquienes").click(function(){
+        $("#parrafo").toggle(2000);
+        return false;
+    })
+
+    $("#btnquienes").click(function(){
+        $("#imagen").toggle(2000);
+        return false;
+    })
+    
+
   });
