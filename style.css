@@ -323,10 +323,12 @@ small{
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     color: white;
     background-color:#FF2442;
+
 }
 #contactenos button:hover{
     background-color:#f84c63;
 }
+
 
 #contactenos .boton-contacto button{
     font-size: 1.2em;
@@ -339,10 +341,31 @@ small{
     background-color:#33dd3c;
 }
 
+
+
 .errores{
     padding-top:3px;
     color: rgb(255, 0, 0);
     display: none;
+}
+
+.botonn{
+    font-size: 1.7em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color:#FF2442;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.botonn{
+    background-color:#f84c63;
+
 }
 
 footer{
