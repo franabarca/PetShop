@@ -17,7 +17,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#enviar").click(function(){
-                $.get("apilocal.json",
+                $.get("https://nachogv95.github.io/repositoriopetshop/apilocal.json",
                 function(data){
                     $.each(data.categories, function(i,item){
                         $("#cartas").append("<div class='col-12 col-md-6 col-lg-4'><div class='card'><img src='"+ item.imagen+"' class='card-img-top' alt='...'><div class='card-body'><h5 class='card-title'>"+ item.precio+"</h5><p class='card-text'>"+ item.nombre+"</p></div><div class='card-footer'><small class='text-muted'><a href='#' class='btn btn-primary'>Añadir al carrito</a></small></div></div></div>");
@@ -31,13 +31,46 @@
 
 
 <body id="fondo">
-    <div class="container">
-        <div class="row mb-3">
-            <h3>Ejemplo: Traer datos as&iacute;ncronamente</h3>
-        </div>
-        <div class="row mb-3">
-            <button type="button" class="btn btn-primary" id="enviar">Traer Datos desde API</button>
-        </div>
+<!-- Bootstrap NAvBar -->
+<nav class="navbar sticky-top navbar-dark navbar-expand-lg" style="background-color:black;">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img width="50" src="imagen/logosf.png" alt="">Peludos Pet Shop</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#perritos">Perros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#gatitos">Gatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#aves">Aves</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#roedores">Roedores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#quienes-somos">Sobre Nostros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contactenos">Contactanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <button class="botonn" id="enviar" >Ver Ofertas</button>
+ 
+
+    <div class="container">     
         
         <section id="cartas" class="row g-3">
             
