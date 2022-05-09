@@ -58,12 +58,14 @@
       </div>
     </div>
   </nav>
+
 </header>
 <br>
 <br>
 <br>
 <body id="fondo">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
 
 <!-- Bootstrap Carrusel -->
 <div>
@@ -124,7 +126,9 @@
   <div class="container">
   <img src="imagen/oferta.png" alt="">
 </div>
+
 </section>
+
 <!-- Bootstrap Carta -->
 <section id="cartas">
   <div class="container">
@@ -329,7 +333,7 @@
 
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contacto">Contactanos</button>
       </div>
-      <form method="get" action="#contactenos" id="formulario-contacto">
+      <form method="get" action="index.html" id="formulario-contacto">
 
         <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="contactor" aria-hidden="true">
           <div class="modal-dialog">
@@ -342,17 +346,21 @@
                 <div class="container">
                   <form action="index.html" enctype="multipart/form-data" method="GET" name="miForm">
                      <div class="mb-3">
-                         <label for="nombre" class="form-label">Nombre Completo</label>
-                         <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre completo">
-                         <div id="mensaje1" class="errores">Escriba su nombre</div>
+                         <label for="nombre" class="form-label">Nombre y Apellido</label>
+                         <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Felipe Camiroaga">
+                         <div id="mensaje1" class="errores">Escriba su nombre y apellido</div>
+                         <div id="mensaje5" class="errores">Debe incluir su nombre y apellido</div>
                      </div>
                      <div class="mb-3">
                       <label for="mail" class="form-label">E-mail</label>
-                      <input type="email" class="form-control" name="mail" id="mail" placeholder="Ingrese su e-mail">
+                      <input type="email" class="form-control" name="mail" id="mail" placeholder="ejemplo@gmail.com">
                       <div id="mensaje2" class="errores">Escriba su e-mail</div>
+                      <div id="mensaje4" class="errores">Ingrese su email correctamente</div>
                     </div>
                     <div class="mb-3">
                     <label for="mensaje" class="form-label">Mensaje</label>
+                    <div id="mensaje6" class="errores">Minimo de 15 caracteres </div>
+                    <div id="mensaje7" class="errores">Maximo de 150 caracteres</div>
                      
                          <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
                          <div id="mensaje3" class="errores">Escriba el mensaje</div>

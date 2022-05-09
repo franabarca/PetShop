@@ -62,6 +62,7 @@
 }
 
 
+
 #cartas {
     padding-bottom: 100px;
 
@@ -230,7 +231,7 @@ small{
 #quienes-somos .container{
 
     text-align: center;
-    padding: 100px 12px;
+    padding: 200px 12px;
 
 }
 #quienes-somos h2{
@@ -247,7 +248,6 @@ small{
 
 #quienes-somos p{
     font-size: 2.5em;
-
 }
 #quienes-somos {
     
@@ -362,4 +362,3 @@ footer .container{
     align-items: flex-end;
 }
 .modal-content { background: rgba(0, 0, 0, 0.8)!important; }
-

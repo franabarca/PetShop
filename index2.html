@@ -11,6 +11,8 @@
      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Peludos Pet Shop</title>
     <link rel="shortcut icon" href="imagen/logosf.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="validaciones.js"></script>
 </head>
 
 <header>
@@ -50,24 +52,31 @@
           Nro cuenta: 007851356784
         </h3>
         <br>
-  <form action="index.html" enctype="multipart/form-data" method="GET" name="miForm">
+  <form action="index2.html" enctype="multipart/form-data" method="GET" name="miForm">
     <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre Completo</label>
-        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre completo">
-    </div>
-    <div class="mb-3">
-     <label for="mail" class="form-label">E-mail</label>
-     <input type="text" class="form-control" name="mail" id="mail" placeholder="Ingrese su e-mail">
-   </div>
+      <label for="nombre" class="form-label">Nombre y Apellido</label>
+      <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Luchito Jara">
+      <div id="mensaje1" class="errores">Escriba su nombre y apellido</div>
+      <div id="mensaje5" class="errores">Debe incluir su nombre y apellido</div>
+  </div>
+  <div class="mb-3">
+   <label for="mail" class="form-label">E-mail</label>
+   <input type="email" class="form-control" name="mail" id="mail" placeholder="ejemplo@gmail.com">
+   <div id="mensaje2" class="errores">Escriba su e-mail</div>
+   <div id="mensaje4" class="errores">Ingrese su email correctamente</div>
+ </div>
    <div class="mb-3">
-      <label for="Donacion" class="form-label">Monto que desea donar</label>
+      <label for="monto" class="form-label">Monto que desea donar</label>
       <br>
-      <input id="InputDonacion" type="number" style="width:300px" heigth=" 200px" min="1000" placeholder="Monto min 1000 pesos">
+      <input id="monto" type="number" name="monto" style="width:300px" heigth=" 200px" placeholder="Monto min 1000 pesos">
+      <div id="mensaje8" class="errores">Donaciones sobre $300000 enviar <br>mail a peludospetshop@gmail.com</div>
+      <div id="mensaje9" class="errores">Ingrese un monto</div>
+      <div id="mensaje10" class="errores">Ingrese un monto mayor a 1000</div>
    </div>
    <br>
-    <div class="boton-contacto"> 
+   <div class="boton-donacion"> 
     <div class="mb-3">
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary" id="btnenviar2">Enviar</button>
     </div>
    </div>
  </form>
