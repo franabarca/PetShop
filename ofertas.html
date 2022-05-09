@@ -16,13 +16,11 @@
     <!--JQuery para consumir API-->
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#enviar").click(function(){
                 $.get("https://nachogv95.github.io/repositoriopetshop/apilocal.json",
                 function(data){
                     $.each(data.categories, function(i,item){
                         $("#cartas").append("<div class='col-12 col-md-6 col-lg-4'><div class='card'><img src='"+ item.imagen+"' class='card-img-top' alt='...'><div class='card-body'><h5 class='card-title'>"+ item.precio+"</h5><p class='card-text'>"+ item.nombre+"</p></div><div class='card-footer'><small class='text-muted'><a href='#' class='btn btn-primary'>Añadir al carrito</a></small></div></div></div>");
                     });
-                });
             });
         })
     </script>
@@ -74,8 +72,6 @@
     </div>
   </nav>
 
-    <button class="botonn" id="enviar" >Ver Ofertas</button>
- 
 
     <div class="container">     
         
