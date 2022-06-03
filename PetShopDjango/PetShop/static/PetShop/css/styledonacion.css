@@ -1,0 +1,119 @@
+#navbarSupportedContent a{
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+}
+#navbarSupportedContent a:hover{
+    color: rgb(116, 113, 106);
+}
+
+.navbar-brand-logo h2{
+    color: rgb(255, 255, 255);
+    padding-bottom: none;
+    margin-bottom: 0;
+}
+.container-fluid a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size:80px;
+    
+}
+.container-fluid img{
+    padding-right: 1.1vw;
+    vertical-align: top;
+    display: inline-block;
+}
+
+
+
+#navbarSupportedContent a{
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+}
+#navbarSupportedContent a:hover{
+    color: rgb(116, 113, 106);
+}
+
+#fondo{
+    margin: 0;
+    background-color: rgba(30,30,30);
+    font-family:roboto,sans-serif;
+}
+
+#donacion {
+    font-weight: bold;
+    text-shadow: 2px 5px 5px rgba(0,0,0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(imagen/donacion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#donacion label{
+    font-size: 1.2em;
+    padding-bottom:10px;
+
+}
+
+
+
+#donacion p{
+    font-size: 2.0em;
+    padding-bottom:25px;
+
+}
+#donacion h2{
+    font-size: 2.5em;
+    padding-bottom:10px;
+
+}
+#donacion h3{
+    font-size: 1.5em;
+    padding-bottom:25px;
+
+}
+
+
+#donacion button{
+    font-size: 1.0em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: rgb(14, 5, 5);
+    background-color:#ee9817;
+}
+
+.errores{
+    padding-top:3px;
+    font-size: 1.0em;
+    color: rgb(235 255 123);
+    display: none;
+}
+
+footer{
+    background-color:rgba(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+
+footer .container{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
