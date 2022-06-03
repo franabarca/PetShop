@@ -21,16 +21,17 @@
 <nav class="navbar fixed-top navbar-dark navbar-expand-lg" style="background-color:black;">
 
   <div class="container-fluid">
-    <div class="navbar" href="#"><img width="65" src="{% static 'pet/img/logosf.png'%}" alt="">
+    <a class="navbar" href="{%url 'index'%}">
+      <img width="65" src="{% static 'pet/img/logosf.png'%}" alt="">
       <span class="navbar-brand-logo collapse navbar-collapse">
       <h2>Peludos Pet Shop</h2>
     </span>
-  </div>
+    </a>
       
       <div class="navbar" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Volver pagina principal</a>
+            <a class="nav-link" href="{%url 'index'%}">Volver pagina principal</a>
           </li>
         </ul>
       </div>
@@ -56,20 +57,20 @@
   <form action="index2.html" enctype="multipart/form-data" method="GET" name="miForm">
     <div class="mb-3">
       <label for="nombre" class="form-label">Nombre y Apellido</label>
-      <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Luchito Jara">
+      <input autocomplete="on" type="text" class="form-control" name="nombre" id="nombre" placeholder="Luchito Jara">
       <div id="mensaje1" class="errores">Escriba su nombre y apellido</div>
       <div id="mensaje5" class="errores">Debe incluir su nombre y apellido</div>
   </div>
   <div class="mb-3">
    <label for="mail" class="form-label">E-mail</label>
-   <input type="email" class="form-control" name="mail" id="mail" placeholder="ejemplo@gmail.com">
+   <input autocomplete="on" type="email" class="form-control" name="mail" id="mail" placeholder="ejemplo@gmail.com">
    <div id="mensaje2" class="errores">Escriba su e-mail</div>
    <div id="mensaje4" class="errores">Ingrese su email correctamente</div>
  </div>
    <div class="mb-3">
       <label for="monto" class="form-label">Monto que desea donar</label>
       <br>
-      <input id="monto" type="number" name="monto" style="width:300px" heigth=" 200px" placeholder="Monto min 1000 pesos">
+      <input autocomplete="on" id="monto" type="number" name="monto" style="width:300px" heigth=" 200px" placeholder="Monto min 1000 pesos">
       <div id="mensaje8" class="errores">Donaciones sobre $300000 enviar <br>mail a peludospetshop@gmail.com</div>
       <div id="mensaje9" class="errores">Ingrese un monto</div>
       <div id="mensaje10" class="errores">Ingrese un monto mayor a 1000</div>

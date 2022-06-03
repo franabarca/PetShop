@@ -127,7 +127,7 @@
 
 <section id="ofertas">
   <div class="container">
-  <a href="ofertas.html"><img class="oferton" src="{% static 'pet/img/oferta.png'%}" alt=""></a>
+  <a href="{%url 'ofertas'%}"><img class="oferton" src="{% static 'pet/img/oferta.png'%}" alt=""></a>
 
 </div>
 
@@ -255,13 +255,13 @@
                   <form action="index.html" enctype="multipart/form-data" method="GET" name="miForm">
                      <div class="mb-3">
                          <label for="nombre" class="form-label">Nombre y Apellido</label>
-                         <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Felipe Camiroaga">
+                         <input autocomplete="on" type="text" class="form-control" name="nombre" id="nombre" placeholder="Felipe Camiroaga">
                          <div id="mensaje1" class="errores">Escriba su nombre y apellido</div>
                          <div id="mensaje5" class="errores">Debe incluir su nombre y apellido</div>
                      </div>
                      <div class="mb-3">
                       <label for="mail" class="form-label">E-mail</label>
-                      <input type="email" class="form-control" name="mail" id="mail" placeholder="ejemplo@gmail.com">
+                      <input autocomplete="on" type="email" class="form-control" name="mail" id="mail" placeholder="ejemplo@gmail.com">
                       <div id="mensaje2" class="errores">Escriba su e-mail</div>
                       <div id="mensaje4" class="errores">Ingrese su email correctamente</div>
                     </div>
