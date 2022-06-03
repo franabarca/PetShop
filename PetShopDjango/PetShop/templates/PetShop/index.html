@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Peludos Pet Shop</title>
+    <link rel="shortcut icon" href="imagen/logosf.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="validaciones.js"></script>
+</head>
+
+<header>
+<!-- Bootstrap NAvBar -->
+  <nav class="navbar fixed-top navbar-dark navbar-expand-lg" style="background-color:black;">
+
+    <div class="container-fluid">
+      <a class="navbar" href="#">
+        {% load static %}
+        <img width="65" src="{% static 'static/PetShop/img/logosf.png'%}" alt="">
+        <span class="navbar-brand-logo collapse navbar-collapse">
+        <h2>Peludos Pet Shop</h2>
+      </span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#perritos">Perros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gatitos">Gatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aves">Aves</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#roedores">Roedores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#quienes-somos">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactenos">Contactanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index2.html">Donar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+<br>
+<br>
+<br>
+<body id="fondo">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+
+<!-- Bootstrap Carrusel -->
+<div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagen/carrusel1.png" class="d-block w-100" alt="..." >
+      <div class="carousel-caption ">
+
+        <h3>Tenemos todo para tu mascota!</h3>
+        <p></p>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="imagen/carrusel2.png" class="d-block w-100" alt="..." >
+      <div class="carousel-caption">
+        <h5>Hasta 20% de descuento</h5>
+        <p>por compras sobre los $50.000</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="imagen/carrusel3.png" class="d-block w-100" alt="..." >
+      <div class="carousel-caption">
+
+        <h5>Envios a todo Chile!</h5>
+        <p></p>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="imagen/carrusel4.png" class="d-block w-100" alt="..." >
+      <div class="carousel-caption ">
+
+        
+        <p>Compra lo mejor para los mejores</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<section id="ofertas">
+  <div class="container">
+
+  <a href="ofertas.html"><img class="oferton" src="imagen/oferta.png" alt=""></a>
+
+</div>
+
+</section>
+
+<section id="perritos">
+  <h2>Todo para tu perro!</h2>
+    <div class="container">
+      <div class="d-none d-sm-none d-md-block">
+      <img class="redondo" src="imagen/perros.png" alt=""height="400px" width="400px">
+    </div>
+      <div class="detalle">
+      <p>
+        <a href="#">🐶Casas y caniles</a><br>
+        <a href="#">🐶Collares, correas, arneses y bozales</a><br>
+        <a href="#">🐶Comederos y bebederos</a><br>
+        <a href="#">🐶Entrenamiento</a><br>
+        <a href="#">🐶Juguetes</a>
+    </p>
+    </div>
+    </div>
+</section>
+
+
+<section id="gatitos">
+  <h2>Todo para tu gato!</h2>
+  <div class="container">
+    <div class="d-none d-sm-none d-md-block">
+      <img class="redondo" src="imagen/gatos.png" alt=""height="400px" width="400px">
+    </div>
+    <div class="detalle">
+
+    <p>
+
+      <a href="#">🐱Camas y rascadores </a><br>
+      <a href="#">🐱Collares, correas y arneses</a><br>
+      <a href="#">🐱Comederos y bebederos</a><br>
+      <a href="#">🐱Entrenamiento</a><br>
+      <a href="#">🐱Juguetes</a>
+    </p>
+    </div>
+</div>
+</section>
+
+<section id="aves">
+  <h2>Todo para tu ave!</h2>
+  <div class="container">
+
+    <div class="d-none d-sm-none d-md-block">
+      <img class="redondo" src="imagen/aves.png" alt="" height="400px" width="400px">
+
+  </div>
+    <div class="detalle">
+
+    <p>
+
+    <a href="#">🐦Casas y jaulas</a><br>
+    <a href="#">🐦Comida y bebederos</a><br>
+    <a href="#">🐦Juguetes</a><br>
+
+  </p>
+  </div>
+  </div>
+</section>
+
+<section id="roedores">
+  <h2>Todo para tu roedor!</h2>
+  <div class="container">
+    <div class="d-none d-sm-none d-md-block">
+      <img class="redondo" src="imagen/roedores.png" alt=""height="400px" width="400px">
+    </div>
+  
+    <div class="detalle">
+    
+    <p>
+
+    <a href="#">🐹Casas y jaulas</a><br>
+    <a href="#">🐹Collares, ropa y accesorios</a><br>
+    <a href="#">🐹Comederos y bebederos</a><br>
+    <a href="#">🐹Juguetes</a>
+    </p>
+    </div>
+  </div>
+</section>
+
+<section id="quienes-somos">
+    <div class="container">
+      <div class="boton-contacto"> 
+      <button id="btnquienes">
+      <h2>¿Quienes somos?</h2>
+      
+    </button>
+    </div>
+    <br>
+    <div class="parrafo" id="parrafo">
+      <p>Peludos Pet Shop es una tienda enfocada en productos para el bienestar animal, realizamos envíos a todo Chile.</p>
+    </div>
+    <div class="imagen" id="imagen">
+      <img src="imagen/nosotroslogo.png" alt="">
+    </div>
+    </div>
+</section>
+
+<section id="contactenos">
+    <div class="container">
+      <h2>Enviamos tus pedidos a todo Chile</h2>
+
+      <p>Por compras sobre los $25.000 tu envío será totalmente gratis!</p>
+      <div class="botonrojo">
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contacto">Contactanos</button>
+      </div>
+      <form method="get" action="index.html" id="formulario-contacto">
+
+        <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="contactor" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="contactor">Contactanos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <form action="index.html" enctype="multipart/form-data" method="GET" name="miForm">
+                     <div class="mb-3">
+                         <label for="nombre" class="form-label">Nombre y Apellido</label>
+                         <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Felipe Camiroaga">
+                         <div id="mensaje1" class="errores">Escriba su nombre y apellido</div>
+                         <div id="mensaje5" class="errores">Debe incluir su nombre y apellido</div>
+                     </div>
+                     <div class="mb-3">
+                      <label for="mail" class="form-label">E-mail</label>
+                      <input type="email" class="form-control" name="mail" id="mail" placeholder="ejemplo@gmail.com">
+                      <div id="mensaje2" class="errores">Escriba su e-mail</div>
+                      <div id="mensaje4" class="errores">Ingrese su email correctamente</div>
+                    </div>
+                    <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <div id="mensaje6" class="errores">Minimo de 15 caracteres </div>
+                    <div id="mensaje7" class="errores">Maximo de 150 caracteres</div>
+                     
+                         <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+                         <div id="mensaje3" class="errores">Escriba el mensaje</div>
+                     </div>
+                     <div class="boton-contacto"> 
+                     <div class="mb-3">
+                         <button type="submit" class="btn btn-primary" id="btnenviar">Enviar</button>
+                     </div>
+                    </div>
+                  </form>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous"></script>
+                                                                                                  
+</body>
+<hr>
+<footer>
+    <div class="container">
+      <p>&copy; Peludos Pet Shop 2022</p>
+
+    </div>
+
+</footer>  
+</html>
