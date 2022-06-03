@@ -89,7 +89,7 @@ small{
     color: rgb(253, 255, 126);
 }
 .detalle a:hover{
-    color:white;
+    color:wh/ite;
 }
 #perritos h2{
     padding-top: 30px;
@@ -113,7 +113,7 @@ small{
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url("/static/img/fondoperro.png");
+    ),url("/static/pet/img/fondoperro.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -146,7 +146,7 @@ small{
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url("/static/img/fondogato.png");
+    ),url("/static/pet/img/fondogato.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -178,7 +178,7 @@ small{
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url("/static/img/fondoave.png");
+    ),url("/static/pet/img/fondoave.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -210,7 +210,7 @@ small{
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url("/static/img/fondoroedor.png");
+    ),url("/static/pet/img/fondoroedor.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -309,7 +309,7 @@ small{
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url("/static/img/starken.png");
+    ),url("/static/pet/img/starken.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
