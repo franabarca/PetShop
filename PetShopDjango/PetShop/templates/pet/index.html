@@ -142,7 +142,7 @@
     </div>
       <div class="detalle">
       <p>
-        <a href="#">🐶Casas y caniles</a><br>
+        <a href="{%url 'productos'%}">🐶Casas y caniles</a><br>
         <a href="#">🐶Collares, correas, arneses y bozales</a><br>
         <a href="#">🐶Comederos y bebederos</a><br>
         <a href="#">🐶Entrenamiento</a><br>
@@ -253,18 +253,33 @@
               <div class="modal-body">
                 <div class="container">
                   <form action="index.html" enctype="multipart/form-data" method="GET" name="miForm">
+
                      <div class="mb-3">
                          <label for="nombre" class="form-label">Nombre y Apellido</label>
                          <input autocomplete="on" type="text" class="form-control" name="nombre" id="nombre" placeholder="Felipe Camiroaga">
                          <div id="mensaje1" class="errores">Escriba su nombre y apellido</div>
                          <div id="mensaje5" class="errores">Debe incluir su nombre y apellido</div>
                      </div>
+
+
+                     <div class="mb-3">
+                      <label for="tipo" class="form-label">Tipo de consulta</label>
+                     <select class="form-select form-select-sm" aria-label=".form-select-sm">
+                      <option value="1">Consulta</option>
+                      <option value="2">Reclamo</option>
+                      <option value="3">Sugerencia</option>
+                      <option value="4">Felicitaciones</option>
+                    </select>
+                    <div id="mensaje8" class="errores">Debe elegir una opcion</div>
+                    </div>
+
                      <div class="mb-3">
                       <label for="mail" class="form-label">E-mail</label>
                       <input autocomplete="on" type="email" class="form-control" name="mail" id="mail" placeholder="ejemplo@gmail.com">
                       <div id="mensaje2" class="errores">Escriba su e-mail</div>
                       <div id="mensaje4" class="errores">Ingrese su email correctamente</div>
                     </div>
+
                     <div class="mb-3">
                     <label for="mensaje" class="form-label">Mensaje</label>
                     <div id="mensaje6" class="errores">Minimo de 15 caracteres </div>

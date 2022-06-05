@@ -46,7 +46,7 @@ $(document).ready(function() {
                                             
                                             if(noValido.test(nombre)){ 
                                                 $("#mensaje5").fadeOut();
-                                                alert('Su mensague a sido enviado correctamente.');   
+                                                alert('Su mensague ha sido enviado correctamente.');   
                                             }
                                             else{
                                                 $("#mensaje5").fadeIn();
