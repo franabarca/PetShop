@@ -23,15 +23,26 @@
 
                         <hr>
                         <div class="d-flex justify-content-end">
-                        <input type="reset" value="Cancelar" class="btn btn-secondary">
+                        <input type="reset" value="Limpiar" class="btn btn-secondary">
                         &nbsp;
                         
 
-                        <button type="submit" id="btnEnviar"  class="btn btn-primary">Enviar</button>
+                        <button type="submit"  class="btn btn-primary">Enviar</button>
                         </div>
                     
                     </form>
-    {{mensaje}}
+    <br>
+    {% if messages %}
+        {% for m in messages%}
+        <script>
+
+            alert("{{m}}");
+            
+            </script>
+        
+        {% endfor %}
+    {% endif%}
+
 </div>
 </div>
 </div>

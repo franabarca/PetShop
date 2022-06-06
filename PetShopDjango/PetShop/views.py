@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Producto
 from .forms import ContactoForm, ProductoForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -51,8 +52,42 @@ def agregar_producto(request):
         formulario = ProductoForm(data=request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
-            data["mensaje"] = "guardado correctamente"
+            messages.success(request, "guardado correctamente")
         else:
             data["form"] = formulario
 
     return render(request, 'pet/producto/agregar.html', data)
+
+#envio de productos hacia el template
+def listar_productos(request):
+    productos = Producto.objects.all()
+
+    data = {
+        'productos': productos
+    }
+    return render(request, 'pet/producto/listar.html', data)
+
+
+def modificar_producto(request, id):
+#el get_object_or_404 es para buscar producto
+    producto = get_object_or_404(Producto, id=id)
+#el instance rellena el formulario
+    data = {
+        'form' : ProductoForm(instance=producto)
+    }
+
+    if request.method == 'POST':
+        formulario = ProductoForm(data=request.POST, instance=producto, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, "modificado correctamente")
+            return redirect(to="listar_productos")
+        data["form"] = formulario
+
+    return render(request, 'pet/producto/modificar.html', data)
+
+def eliminar_producto(request, id):
+    producto = get_object_or_404(Producto, id=id)
+    producto.delete()
+    messages.success(request, "eliminado correctamente")
+    return redirect(to="listar_productos")

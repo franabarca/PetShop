@@ -1,16 +1,38 @@
 {% extends 'pet/base.html'%}
 
 {% block contenido %}
+{% load humanize %}
+<br><br><br><br><br>
+<div class="card">
 
-<table>
-    <tr>
-        <th>Nombre</th>
-        <th>Precio</th>
-        <th>Marca</th>
-        <th>Descripcion</th>
-    </tr>
+    <div class="card-body">
+        <h2>Listado de productos</h2>
+        <hr>
+        <div class="table-responsive">
+                <table class="table table-secondary table-striped table-hover">
+                    <thead class="table-dark">
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Marca</th>
+                        <th>Descripcion</th>
+                        <th>Opciones</th>
+                    </thead>
+                    {% for p in productos %}
 
-</table>
+                    <tr>
+                        <td>{{ p.nombre | title}}</td>
+                        <td>{{ p.precio | intcomma}}</td>
+                        <td>{{ p.marca | title}}</td>
+                        <td>{{ p.descripcion | title}}</td>
+                        <td>
+                            <a href="{%url 'modificar_producto' p.id%}" class="btn btn-info btn-sm">modificar</a>
+                            <a href="{%url 'eliminar_producto' p.id%}" class="btn btn-danger btn-sm">eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
 
-
+                </table>
+            </div>
+    </div>
+</div>
 {% endblock %}
