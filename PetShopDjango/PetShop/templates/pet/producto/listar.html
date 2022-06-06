@@ -25,6 +25,7 @@
                         <td>{{ p.marca | title}}</td>
                         <td>{{ p.descripcion | title}}</td>
                         <td>
+                            
                             <a href="{%url 'modificar_producto' p.id%}" class="btn btn-info btn-sm">modificar</a>
                             <a href="{%url 'eliminar_producto' p.id%}" class="btn btn-danger btn-sm">eliminar</a>
                         </td>
@@ -34,5 +35,6 @@
                 </table>
             </div>
     </div>
+    
 </div>
 {% endblock %}

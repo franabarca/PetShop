@@ -23,6 +23,9 @@
 
                         <hr>
                         <div class="d-flex justify-content-end">
+
+                        <a type="button" class="btn btn-success" href="{%url 'listar_productos'%}">Volver</a>
+                        &nbsp;
                         <input type="reset" value="Cancelar" class="btn btn-secondary">
                         &nbsp;
                         
@@ -31,7 +34,18 @@
                         </div>
                     
                     </form>
-    {{mensaje}}
+                    <br>
+                    {% if messages %}
+                        {% for m in messages%}
+                        <script>
+                
+                            alert("{{m}}");
+                            
+                            </script>
+                        
+                        {% endfor %}
+                    {% endif%}
+                
 </div>
 </div>
 </div>
