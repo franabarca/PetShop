@@ -37,22 +37,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#perritos">Perros</a>
+            <a class="nav-link" href="{%url 'productos'%}">Productos</a>
           </li>
+         
           <li class="nav-item">
-            <a class="nav-link" href="#gatitos">Gatos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#aves">Aves</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#roedores">Roedores</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#quienes-somos">Sobre Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contactenos">Contactanos</a>
+            <a class="nav-link" href="{%url 'contacto'%}">Contactanos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{%url 'donar'%}">Donar</a>
@@ -127,7 +116,7 @@
 
 <section id="ofertas">
   <div class="container">
-  <a href="{%url 'ofertas'%}"><img class="oferton" src="{% static 'pet/img/oferta.png'%}" alt=""></a>
+  <a href="{%url 'productos'%}"><img class="oferton" src="{% static 'pet/img/oferta.png'%}" alt=""></a>
 
 </div>
 
@@ -241,7 +230,7 @@
 
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contacto">Contactanos</button>
       </div>
-      <form method="get" action="index.html" id="formulario-contacto">
+      <form method="post" action="" id="formulario-contacto">
 
         <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="contactor" aria-hidden="true">
           <div class="modal-dialog">
