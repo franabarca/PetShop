@@ -13,8 +13,9 @@
      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Peludos Pet Shop</title>
     <link rel="shortcut icon"  href="{% static 'pet/img/logosf.png'%}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="{% static 'pet/js/validaciones.js'%}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
@@ -54,7 +55,7 @@
 </header>
 
 <body id="fondo">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
 
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -62,19 +63,7 @@
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
   crossorigin="anonymous"></script>
 
-  {% if messages %}
-  {% for m in messages%}
-    <script>
-      Swal.fire({
-        "title": "Felicitaciones",
-        "text" : "{{m}}",
-        "icon": "succes"
-      })
-    </script>
 
-  {% endfor%}
-
-  {% endif %}
 
 <div id="contenido">
 
@@ -84,9 +73,22 @@
 
     {% endblock %}
   </div>
+  {% if messages %}
+  {% for m in messages%}
+    <script>
+      Swal.fire({
+        "title": "Felicitaciones",
+        "text" : "{{m}}",
+        "icon": "success"
+      })
+    </script>
+
+  {% endfor%}
+
+  {% endif %}
 
 
-                                                                                                  
+                                                                                   
 </body>
 <hr>
 <footer>

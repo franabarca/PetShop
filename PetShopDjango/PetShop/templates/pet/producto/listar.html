@@ -1,13 +1,11 @@
 {% extends 'pet/base.html'%}
 
-{% block js %}
-
-<script>
-    
-</script>
 
 
-{% endblock %}
+
+
+
+
 
 
 
@@ -15,6 +13,24 @@
 {% block contenido %}
 {% load humanize %}
 <br><br><br><br><br>
+<script>
+    function eliminarProducto(id){    Swal.fire({
+        "title": "¿Está seguro que desea elimanar el producto?",
+        "text" : "Esta opción no se puede revertir",
+        "icon": "warning",
+        "showCancelButton":true,
+        "cancelButtonText":"No, Cancelar",
+        "confirmButtonText":"Sí, Eliminar",
+        "reverseButtons":true,
+        "confirmButtonColor":"#dc3545"
+      })
+      .then(function(result){
+        if(result.isConfirmed){
+            window.location.href = "/eliminar-producto/" + id+"/"
+        }
+      })
+    }
+  </script>
 <div class="card">
 
     <div class="card-body">
@@ -29,22 +45,27 @@
                         <th>Descripcion</th>
                         <th>Opciones</th>
                     </thead>
-                    {% for p in productos %}
+                   
+                    {% for p in entity %}
 
                     <tr>
                         <td>{{ p.nombre | title}}</td>
-                        <td>{{ p.precio | intcomma}}</td>
+                        <td>${{ p.precio | intcomma}}</td>
                         <td>{{ p.marca | title}}</td>
                         <td>{{ p.descripcion | title}}</td>
                         <td>
                             
                             <a href="{%url 'modificar_producto' p.id%}" class="btn btn-info btn-sm">modificar</a>
-                            <a href="{%url 'eliminar_producto' p.id%}" class="btn btn-danger btn-sm">eliminar</a>
+                            <a href="#" onclick="eliminarProducto({{p.id }})" class="btn btn-danger btn-sm">eliminar</a>
                         </td>
                     </tr>
                     {% endfor %}
 
                 </table>
+                <hr>
+                <div>
+                    {% include 'pet/paginator.html' %}
+                </div>
             </div>
     </div>
     
