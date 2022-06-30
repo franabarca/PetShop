@@ -43,12 +43,16 @@
               <a class="nav-link" style="color:#F1C40F;">@{{ user.username }}</a>
             </li>
             {% endif%}
+            {% if perms.app.add_producto %}
             <li class="nav-item">
                 <a class="nav-link" href="{%url 'agregar_producto'%}">Agregar producto</a>
             </li>
+            {% endif%}
+            {% if perms.app.view_producto %}
             <li class="nav-item">
                 <a class="nav-link" href="{%url 'listar_productos'%}">Listado productos</a>
             </li>
+            {% endif%}
             <li class="nav-item">
                 <a class="nav-link" href="{%url 'index'%}">Volver pagina principal</a>
             </li>

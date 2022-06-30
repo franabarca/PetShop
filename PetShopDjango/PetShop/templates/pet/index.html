@@ -73,8 +73,23 @@
 <br>
 <br>
 <body id="fondo">
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
+  {% if messages %}
+  {% for m in messages%}
+    <script>
+      Swal.fire({
+        "title": "Felicitaciones",
+        "text" : "{{m}}",
+        "icon": "success"
+      })
+    </script>
+
+  {% endfor%}
+
+  {% endif %}
+
 
 <!-- Bootstrap Carrusel -->
 <div>

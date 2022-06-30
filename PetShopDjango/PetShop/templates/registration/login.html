@@ -10,6 +10,8 @@
 </head>
 <br><br><br>
 <body>
+    {% load socialaccount %}
+    {% providers_media_js %}
     {% load crispy_forms_tags %}
     <div class="container">
 
@@ -25,6 +27,7 @@
                                 {% csrf_token %}
                                 {{ form | crispy}}
                                 <a href="{% url 'registro' %}">Registrarse</a>
+                                <a class="fab fa-google size_social text-info" aria-hidden="true" href="{% provider_login_url "google" %}">Ingresar con Google</a>
                                 
                                 <br>
                                 <hr>
