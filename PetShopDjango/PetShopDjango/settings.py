@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 #ACTIVAR FRAMEWORK DE MENSAGERIA ENTRE VENTANAS
 MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
@@ -55,7 +55,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'rest_framework',
+    'pwa',
 ]
+
 
 SITE_ID = 1
 
@@ -158,3 +160,30 @@ import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "static"
+
+PWA_APP_NAME = 'PeludosPetShop'
+PWA_APP_DESCRIPTION = "Tienda de artículos para mascotas"
+PWA_APP_THEME_COLOR = "#2E3439"
+PWA_APP_BACKGROUND_COLOR = "#0A0C0E"
+
+PWA_APP_ICONS = [
+    {
+        "src": "/static/pet/pwa/img/logito(1).png",
+        "sizes": "139x140",
+        "purpose":"any",
+    }
+]
+
+PWA_APP_ICONS_APPLE = [
+    {
+        "src": "/static/pet/pwa/img/logito(1).png",
+        "sizes": "139x140",
+        "purpose":"any",
+    }
+]
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "serviceworker.js")

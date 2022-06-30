@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    
+  {% load static %}
+  {% load pwa %}
+
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +18,7 @@
     <link rel="shortcut icon"  href="{% static 'pet/img/logosf.png'%}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'pet/js/validaciones.js'%}"></script>
+    {% progressive_web_app_meta %}
 </head>
 
 <header>
@@ -75,7 +79,10 @@
 <body id="fondo">
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
+
+
+
   {% if messages %}
   {% for m in messages%}
     <script>
