@@ -3,6 +3,8 @@ from .views import home, contacto, donar, index, productos, agregar_producto,\
      listar_productos, modificar_producto, eliminar_producto, registro, ProductoViewset
 from rest_framework import routers
 from django.views.generic import TemplateView
+from . import views
+from .viewslogin import login
 
 router = routers.DefaultRouter()
 router.register('producto', ProductoViewset)
@@ -21,5 +23,8 @@ urlpatterns = [
     path('registro', registro, name="registro"),
     path('api/', include(router.urls)),
     path('offline/', TemplateView.as_view(template_name="offline.html")),
+    path('carrito/', views.carrito, name="carrito"),
+    path('checkout/', views.checkout, name="checkout"),
+    path('login', login, name='login'),
 
 ]

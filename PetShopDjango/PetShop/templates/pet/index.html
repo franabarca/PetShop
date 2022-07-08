@@ -28,6 +28,7 @@
     <div class="container-fluid">
       <a class="navbar" href="#">
         <img width="65" src="{% static 'pet/img/logosf.png'%}" alt="">
+        
         <span class="navbar-brand-logo collapse navbar-collapse">
         <h2>Peludos Pet Shop</h2>
       </span>
@@ -67,7 +68,16 @@
             <a class="nav-link" href="{% url 'registro' %}" style="color:#85C1E9 ;">Registrarse</a>
           </li>
           {% endif%}
+         
+          <a href="{% url 'carrito' %}">
+            <img  id="cart-icon" src="{% static 'pet/img/cart.png' %}">
+            </a>
+            <p id="cart-total">{{ carritoItems}}</p>
         </ul>
+                  
+           
+       
+        
       </div>
     </div>
   </nav>
@@ -335,6 +345,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous"></script>
+
                                                                                                   
 </body>
 <hr>

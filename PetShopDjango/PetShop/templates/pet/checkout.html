@@ -1,0 +1,75 @@
+{% extends 'pet/base.html'%}
+
+{% block contenido %}
+
+{% load crispy_forms_tags %}
+<br><br><br><br>
+
+    <div class="row">
+         <div class="col-12 col-md-6 offset-md-3">
+                 <div class="card">
+                        <div class="card-body">
+                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="box-element">
+                                                            <h2>Información de envío</h2>
+                                                            <hr>
+                                                            <div class="form-field">
+                                                                <p>Direccion</p>
+                                                                <input class="form-control" type="text" name="direccion">
+                                                            </div>
+                                                            <div class="form-field">
+                                                                <p>Ciudad</p>
+                                                                <input class="form-control" type="text" name="ciudad">
+                                                            </div>
+
+                                                            <div class="form-field">
+                                                                <p>Codigo Postal</p>
+                                                                <input class="form-control" type="text" name="codigopostal">
+                                                            </div>
+                                                            <hr>
+                                                            <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continuar">
+                                                        </div>
+                                                    </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="box-element">
+                                                                <a  class="btn btn-outline-dark" href="{% url 'carrito' %}">&#x2190; Volver al carrito</a>
+                                                                <hr>
+                                                                <h3>Resumen del pedido</h3>
+                                                                <hr>
+                                                                {% for item in items %}
+                                                                        <div class="container">
+                                                                            <div class="row">
+                                                                                <div class="col-sm">
+                                                                                <div style="flex:2"><img width="40" height="40" class="row-image" src="{{item.producto.imagen.url}}"></div>
+                                                                                </div>
+
+                                                                                <div class="col-sm">
+                                                                                <div style="flex:2"><p>{{item.producto.nombre}}</p></div>
+                                                                                </div>
+
+                                                                                <div class="col-sm">
+                                                                                <div style="flex:1"><p>${{item.producto.precio}}</p></div>
+                                                                                </div>
+
+                                                                                <div class="col-sm">
+                                                                                <div style="flex:1"><p>{{item.cantidad}}</p></div>
+                                                                                </div>
+                                                                            </div>    
+                                                                        </div>
+                                                                {% endfor %}
+                                                            </div>
+                                                        </div>
+
+                                </div>
+                                                   
+                                                    <hr>
+                                                    <h5>Items:   {{pedido.get_carrito_items}}</h5>
+                                                    <h5>Total:   {{pedido.get_carrito_total|floatformat:2}}</h5>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+
+{% endblock %}

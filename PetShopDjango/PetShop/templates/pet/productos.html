@@ -14,34 +14,36 @@
       <div class="row g-3">
 
         {% for p in productos%}
-
+        {% if p.stock > 0%}
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card">
-            {% if p.imagen %}
-            <img src="{{ p.imagen.url }}" class="card-img-top" alt="...">
-            {% endif %}
+           
+           
+              <img src="{{ p.imagen }}" class="card-img-top" alt="...">
+             
             <div class="card-body">
               
-              <h6 class="card-text">{{p.marca}}</p>
+              <h5 class="card-text">{{p.nombre_marca}}</p>
 
-              <h5 class="card-text">{{p.nombre}}</p>
+              <h2 class="card-text">{{p.nombre}}</p>
 
-              <h4 class="card-text">{{p.descripcion}}</p>
+              <h3 class="card-text">{{p.descripcion}}</p>
 
-              <h3 class="card-title">${{p.precio | intcomma}}</h5>
+              <h2 class="card-title">${{p.precio | intcomma}}</h5>
 
             </div>
 
 
-            <div class="card-footer">
+          <div class="card-footer">
               <small class="text-muted">              
-                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                <button data-producto={{producto.id}} data-action="add" href="#" class="btn btn-primary actualizar-carrito">Añadir al carrito</button>
               </small>
           </div>
+         
         </div>
       </div>
-
+      {% endif %}
       {% endfor%}
    
   </section>

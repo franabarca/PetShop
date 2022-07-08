@@ -1,0 +1,64 @@
+{% extends 'pet/base.html'%}
+
+{% block contenido %}
+{% load crispy_forms_tags %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="card">
+
+    <div class="card-body">
+        <a  class="btn btn-outline-dark" href="{% url 'productos' %}">&#x2190; Seguir Comprando</a>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-secondary table-striped table-hover table-bordered">
+
+
+               <tr>
+                <th><h3>Productos: <strong>{{pedido.get_carrito_items}}</strong></h2> </th>                    
+                <th><h3>Precio Total: <strong>${{pedido.get_carrito_total | floatformat:2}}</strong></h3></th>
+               </tr>
+
+            </table>
+            <hr>
+            <a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Pagar</a>
+
+        </div>
+        <h2>Productos en el carrito</h2>
+        <hr>
+        <div class="table-responsive-lg">
+                <table class="table table-secondary table-striped table-hover table-bordered">
+                    <thead class="table-dark">
+                        <th><center>Producto</center> </th>
+                        <th></th>
+                        
+                        <th><center>Precio</center></th>
+                        <th><center>Cantidad</center></th>
+                        <th><center>Total</center></th>
+                    </thead>
+                    {% for item in items %}
+                   <tr>
+                        <td><center>{{ item.producto.nombre }}</center></td>
+                        <td><img  width="200" height="200" class="rounded mx-auto d-block" src="{{ item.producto.imagen.url }}" alt=""></td>
+                        
+                        <td><center>${{ item.producto.precio| floatformat:2 }}</center></td>
+                        <td><center>{{ item.cantidad }}</center></td>
+                        <td><center>${{item.get_total}}</center></td>
+                   </tr>
+                   {% endfor %}
+
+                </table>
+                <hr>
+
+            </div>
+    </div>
+    
+    
+</div>
+
+
+{% endblock %}

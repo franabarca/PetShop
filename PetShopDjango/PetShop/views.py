@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Producto
+from .models import *
 from .forms import ContactoForm, ProductoForm, CustomUserCreationForm
 from django.contrib import messages
 from django.core.paginator import Paginator
@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required, permission_required
 from rest_framework import viewsets
 from .serializers import ProductoSerializer
+import requests
 
 # Create your views here.
 
@@ -17,13 +18,26 @@ class ProductoViewset(viewsets.ModelViewSet):
 
 
 
+
 def home(request):
+    
 
     return render(request, 'pet/index.html')
 
 def index(request):
+    if request.user.is_authenticated:
+        comprador = request.user.comprador
+        pedido, created = Pedido.objects.get_or_create(comprador=comprador, complete=False)
+        items = pedido.itempedido_set.all()
+        carritoItems = pedido.get_carrito_items
 
-    return render(request, 'pet/index.html')
+    else: 
+        items = []
+        pedido = {'get_carrito_total': 0,'get_carrito_items':0}
+        carritoItems = pedido['get_carrito_items']
+    
+    context = {'productos': productos, 'carritoItems':carritoItems}
+    return render(request, 'pet/index.html', context)
 
 def donar(request):
 
@@ -46,13 +60,46 @@ def contacto(request):
     return render(request, 'pet/contacto.html', data)
 
 def productos(request):
+    response = requests.get('http://127.0.0.1:8000/api/producto/', headers={'Authorization': 'Token e865ab7e81df268d719cbba968fae9fef9949c6e'}).json()
 
-    productos = Producto.objects.all()
+    
     data = {
-        'productos': productos
+        'productos': response
     }
 
     return render(request, 'pet/productos.html', data)
+
+def carrito(request):
+
+    if request.user.is_authenticated:
+        comprador = request.user.comprador
+        pedido, created = Pedido.objects.get_or_create(comprador=comprador, complete=False)
+        items = pedido.itempedido_set.all()
+        carritoItems = pedido.get_carrito_items
+    else: 
+        items = []
+        pedido = {'get_carrito_total': 0,'get_carrito_items':0}
+        carritoItems = pedido.get_carrito_items
+        
+    context = {'items': items, 'pedido': pedido,'productos': productos, 'carritoItems':carritoItems}
+    return render(request, 'pet/carrito.html', context)
+
+def checkout(request):
+    
+    if request.user.is_authenticated:
+        comprador = request.user.comprador
+        pedido, created = Pedido.objects.get_or_create(comprador=comprador, complete=False)
+        items = pedido.itempedido_set.all()
+        carritoItems = pedido.get_carrito_items
+
+    else: 
+        items = []
+        pedido = {'get_carrito_total': 0,'get_carrito_items':0}
+        items = pedido.itempedido_set.all()
+        carritoItems = pedido.get_carrito_items
+        
+    context = {'items': items, 'pedido': pedido,'productos': productos, 'carritoItems':carritoItems}
+    return render(request, 'pet/checkout.html', context)
 
 @permission_required('app.add_producto')
 def agregar_producto(request):

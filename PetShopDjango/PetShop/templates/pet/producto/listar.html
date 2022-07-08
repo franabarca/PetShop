@@ -43,6 +43,7 @@
                         <th>Precio</th>
                         <th>Marca</th>
                         <th>Descripcion</th>
+                        <th>Stock</th>
                         <th>Opciones</th>
                     </thead>
                    
@@ -53,6 +54,7 @@
                         <td>${{ p.precio | intcomma}}</td>
                         <td>{{ p.marca | title}}</td>
                         <td>{{ p.descripcion | title}}</td>
+                        <td>{{ p.stock | title}}</td>
                         <td>
                             {% if perms.app.change_producto %}
                             <a href="{%url 'modificar_producto' p.id%}" class="btn btn-info btn-sm">modificar</a>

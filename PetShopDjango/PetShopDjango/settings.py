@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'rest_framework',
     'pwa',
+    'rest_framework.authtoken',
 ]
 
 
@@ -96,10 +97,40 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'PetShopDjango.wsgi.application'
 
+#REST FRAMEWORK
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+#'default': {
+    #    'ENGINE': 'django.db.backends.oracle',
+    #    'NAME': '127.0.0.1:1521/orcl',
+    #    'USER': 'django',
+    #    'PASSWORD': 'django',
+    #    'TEST': {
+    #        'USER': 'default_test',
+    #        'TBLSPACE': 'default_test_tbls',
+    #        'TBLSPACE_TMP': 'default_test_tbls_tmp',
+    #    },
+    #},
+    #'other': {
+    #    'ENGINE': 'django.db.backends.oracle',
+    #    'NAME': '127.0.0.1:1521/orcl',
+    #    'USER': 'django',
+    #    'PASSWORD': 'django',
+    #    'TEST': {
+    #        'USER': 'other_test',
+    #        'TBLSPACE': 'other_test_tbls',
+    #        'TBLSPACE_TMP': 'other_test_tbls_tmp',
+    #    },
+    #},
+    
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
