@@ -75,13 +75,11 @@ def carrito(request):
         comprador = request.user.comprador
         pedido, created = Pedido.objects.get_or_create(comprador=comprador, complete=False)
         items = pedido.itempedido_set.all()
-        carritoItems = pedido.get_carrito_items
     else: 
         items = []
         pedido = {'get_carrito_total': 0,'get_carrito_items':0}
-        carritoItems = pedido.get_carrito_items
         
-    context = {'items': items, 'pedido': pedido,'productos': productos, 'carritoItems':carritoItems}
+    context = {'items': items, 'pedido': pedido}
     return render(request, 'pet/carrito.html', context)
 
 def checkout(request):
